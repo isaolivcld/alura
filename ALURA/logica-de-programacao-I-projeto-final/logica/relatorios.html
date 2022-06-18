@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- links pro plugin de daterange do calendário -->
+
+
+</head>
+
+<body>
+    <label class="instrucao-caixinhas">Quantidade de conversas analisadas</label>
+    <input type="text" id="qtd-conversas-analisadas" required>
+    <br>
+
+    <label for="">Empresa Analisada</label>
+    <input type="text" id="empresa-analisada">
+    <br>
+
+    <label for="text">Quais dias foram analisados?</label>
+    <input type="date" id="date-picker" value="dd/mm/aaaa - dd/mm/aaaa" name="pick-daterange"> a
+    <input type="date" id="date-picker" value="dd/mm/aaaa - dd/mm/aaaa" name="pick-daterange">
+    <br>
+
+    <label for="">Conversas em análise para correção</label>
+    <input type="text" required id="conversasParaCorrecao">
+    <br>
+
+    <label for="">Erros corrigidos</label>
+    <input type="text" required id="errosCorrigidos">
+    <br>
+
+    <label for="">Conversas em que o bot não tem resposta programada pra frase e/ou foram feitas sugestões</label>
+    <input type="text" required id="semRespostaNoBot">
+    <br>
+
+    <label for="">Erros de fluxo ou resposta incorreta</label>
+    <input type="" required id="errosFluxo">
+    <br>
+
+    <label for="">Melhorias Simples</label>
+    <input type="text" required id="melhorias">
+    <br>
+
+    <label for="">Testes realizados</label>
+    <input type="text" required id="testesProd">
+    <br>
+
+    <label for="">Chamados no Suporte</label>
+    <input type="text" required id="chamadosSuporte">
+    <br>
+
+    <label for="">Observação</label>
+    <input type="text" required id="Obs">
+
+    <br>
+
+    <button id="btn-next">Next</button>
+
+</body>
+
+</html>
+
+<script>
+    var qtdConversasAnalisadas = document.querySelector("#qtd-conversas-analisadas") // puxa o primeiro input da lista
+
+    var empresaAnalisada = document.querySelector("#empresa-analisada") // puxa o segundo input da lista
+
+    //Aqui eu vou criar a variável pra setar o mês
+
+    var errosEncontrados = document.querySelector("#conversasParaCorrecao") // puxa o quarto input da lista
+
+    var errosCorrigidos = document.querySelector("#errosCorrigidos") // puxa o quinto input da lista
+
+    var semRespostaNoBot = document.querySelector("#semRespostaNoBot") // puxa o sexto input da lista
+
+    var errosFluxo = document.querySelector("#errosFluxo") // puxa o sétimo input da lista
+
+    var melhorias = document.querySelector("#melhorias") // puxa o oitavo input da lista
+
+    var testesProd = document.querySelector("#testesProd") // puxa o nono input da lista
+
+    var chamadosSuporte = document.querySelector ("#chamadosSuporte") // puxa o décimo input da lista
+
+    var campoObservacao = document.querySelector ("#Obs") // puxa o décimo primeiro input da lista
+
+    const next = document.querySelector("#btn-next") // A constante puxa o botão next
+
+    /* qtdConversasAnalisadas.focus() */
+
+    // Essa função serve pra salvar todos os dados que foram colocados em cada input, e depois, vamo juntar eles e imprimir um
+    // texto, pra formar o relatório que queremos
+
+    function trazerRelatorio() {
+
+        qtdConversasAnalisadas.value="";
+        empresaAnalisada.value="";
+        // colocar data aqui quando estiver pronta
+        errosEncontrados.value="";
+        errosCorrigidos.value="";
+        semRespostaNoBot.value="";
+        errosFluxo.value="";
+        melhorias.value="";
+        testesProd.value="";
+        chamadosSuporte.value="";
+        campoObservacao.value="";
+
+    }
+
+    function imprimirRelatorio () {
+        next.addEventListener("click", impressao);
+
+        function impressao (){
+            alert (trazerRelatorio)
+        }
+    }

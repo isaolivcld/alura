@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- links pro plugin de daterange do calendário -->
+
+
+</head>
+
+<body>
+    <label class="instrucao-caixinhas">Quantidade de conversas analisadas</label>
+    <input type="text" id="qtd-conversas-analisadas" required>
+    <br>
+
+    <label for="">Empresa Analisada</label>
+    <input type="text" id="empresa-analisada">
+    <br>
+
+    <label for="text">Quais dias foram analisados?</label>
+    <input type="date" id="date-picker" value="dd/mm/aaaa - dd/mm/aaaa" name="pick-daterange"> a
+    <input type="date" id="date-picker" value="dd/mm/aaaa - dd/mm/aaaa" name="pick-daterange">
+    <br>
+
+    <label for="">Conversas em análise para correção</label>
+    <input type="text" required id="conversasParaCorrecao">
+    <br>
+
+    <label for="">Erros corrigidos</label>
+    <input type="text" required id="errosCorrigidos">
+    <br>
+
+    <label for="">Conversas em que o bot não tem resposta programada pra frase e/ou foram feitas sugestões</label>
+    <input type="text" required id="semRespostaNoBot">
+    <br>
+
+    <label for="">Erros de fluxo ou resposta incorreta</label>
+    <input type="" required id="errosFluxo">
+    <br>
+
+    <label for="">Melhorias Simples</label>
+    <input type="text" required id="melhorias">
+    <br>
+
+    <label for="">Testes realizados</label>
+    <input type="text" required id="testesProd">
+    <br>
+
+    <label for="">Chamados no Suporte</label>
+    <input type="text" required id="chamadosSuporte">
+    <br>
+
+    <label for="">Observação</label>
+    <input type="text" required id="Obs">
+
+    <br>
+
+    <button id="btn-next">Next</button>
+
+</body>
+
+</html>
+
+<script>
+
+
+    let btnNext = document.querySelector("#btn-next")
+
+    const reunirDados = (info) => {
+        let data1 = document.querySelector("#obs")
+    }
+
+    const printData = () => {
+        console.log(reunirDados)
+
+    }
+
+    const next = () =>{
+        btnNext.addEventListener("click",printData)
+    }
+
+    
+
+  
+</script>
